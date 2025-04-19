@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background: conic-gradient(lime, white, aqua, white, lime);
+  animation: tiger 2s linear infinite;
+}
+.container h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 50px;
+}
+.container h1::first-letter {
+  font-size: 60px;
+  color: blue;
+}
+.container p {
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 800;
+  color: red;
+  letter-spacing: 10px;
+  animation: name 2s linear infinite;
+  text-transform: capitalize;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  background: conic-gradient(
+    blue 0 25%,
+    white 25% 50%,
+    blue 50% 75%,
+    white 75% 100%
+  );
+  border-radius: 50%;
+  border: 1px solid white;
+  animation: box 2s linear infinite;
+}
+@keyframes box {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes name {
+  from {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+@keyframes tiger {
+  0% {
+    background: conic-gradient(lime, white, aqua, white, lime);
+  }
+  25% {
+    background: conic-gradient(white, lime, white, aqua, white);
+  }
+  50% {
+    background: conic-gradient(aqua, white, lime, white, aqua);
+  }
+  75% {
+    background: conic-gradient(white, aqua, white, lime, white);
+  }
+  100% {
+    background: conic-gradient(lime, white, aqua, white, lime);
+  }
+}
